@@ -23,11 +23,18 @@
       line-height:1.6; -webkit-font-smoothing:antialiased;
     }
     a { color:var(--blue-700); }
-    .wrap { max-width:820px; margin:0 auto; padding:0 20px 64px; }
+    .wrap { position:relative; z-index:1; max-width:820px; margin:0 auto; padding:0 20px 64px; }
     header.hero {
+      position:relative;
       background:linear-gradient(135deg, var(--blue-700) 0%, var(--indigo-600) 100%);
       color:#fff; padding:40px 20px 48px; text-align:center;
     }
+    .hero .backlink {
+      position:absolute; left:16px; top:16px; background:rgba(255,255,255,.15); color:#fff;
+      text-decoration:none; font-size:.85rem; font-weight:600; padding:6px 12px;
+      border-radius:999px;
+    }
+    .hero .backlink:hover { background:rgba(255,255,255,.28); }
     .hero .brand { display:flex; justify-content:center; margin-bottom:12px; }
     .hero .logo { height:72px; background:#fff; border-radius:14px; padding:10px 16px; }
     .hero .tagline { opacity:.85; font-size:.9rem; font-weight:500; margin-bottom:6px; }
@@ -66,6 +73,17 @@
       margin-top:16px; padding-top:14px; border-top:1px solid var(--gray-200); font-size:.85rem;
     }
     .source { color:var(--blue-700); font-weight:600; text-decoration:none; }
+    .editions { display:flex; flex-direction:column; gap:12px; margin-top:24px; }
+    .edition {
+      display:flex; align-items:center; gap:12px; background:#fff; border:1px solid var(--gray-200);
+      border-left:5px solid var(--blue-600); border-radius:14px; padding:16px 20px;
+      text-decoration:none; color:var(--slate-900); box-shadow:0 6px 20px rgba(15,23,42,.06);
+    }
+    .edition:hover { border-left-color:var(--indigo-600); }
+    .edition-week { font-weight:700; flex:1; }
+    .edition-meta { color:var(--gray-500); font-size:.85rem; }
+    .edition-go { color:var(--blue-700); font-weight:700; }
+    .empty { text-align:center; color:var(--gray-500); margin-top:32px; }
     footer { text-align:center; color:var(--gray-500); font-size:.82rem; padding:8px 20px; }
     footer .org { font-weight:600; color:var(--gray-700); }
     footer a { color:var(--blue-700); text-decoration:none; }
@@ -74,6 +92,7 @@
 </head>
 <body>
   <header class="hero">
+    <a class="backlink" href="../index.html">← Índice</a>
     <div class="brand">
       <img class="logo" src="https://anfaia.org/ANFAIA_logo_web.png" alt="Anfaia">
     </div>
@@ -82,10 +101,7 @@
     <div class="sub">Semana del 1 al 7 de junio de 2026</div>
   </header>
   <div class="wrap">
-    <div class="intro">
-      Resumen de las 6 noticias de inteligencia artificial más relevantes de la semana,
-      explicadas con el mismo criterio que la noticia diaria de Anfaia.
-    </div>
+    <div class="intro">Esta semana en Anfaia Weekly AI, exploramos la convergencia de la inteligencia artificial en diversas áreas, desde la optimización de la entrega de software hasta la mejora de la interacción usuario-máquina. Las innovaciones como el sistema de memoria de ChatGPT y la evaluación de herramientas de IA con EVA-Bench Data 2.0 reflejan un impulso hacia experiencias más personalizadas y eficientes. Además, la integración de tecnologías en robótica y la creciente atención a la sostenibilidad en el uso de recursos subrayan la importancia de un enfoque responsable en el desarrollo de la IA. Estas tendencias son cruciales para la comunidad técnica, ya que marcan el camino hacia un futuro donde la IA no solo mejora procesos, sino que también se alinea con valores éticos y sostenibles.</div>
     
     <article class="card" style="--accent: #6366f1">
       <div class="card-head">
@@ -93,10 +109,10 @@
         <span class="rank">relevancia 85/100</span>
       </div>
       <h2 class="card-title"><span class="num">1.</span> <a href="https://openai.com/index/endava-frontiers" target="_blank" rel="noopener">Endava transforma la entrega de software con agentes de IA</a></h2>
-      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Endava ha implementado agentes de IA, incluyendo ChatGPT Enterprise y Codex, para optimizar su proceso de entrega de software. Esta estrategia busca automatizar flujos de trabajo y fomentar una cultura nativa de IA en la empresa.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La integración de agentes de IA en el desarrollo de software puede acelerar significativamente los ciclos de entrega y mejorar la eficiencia operativa. Esto representa un avance en la forma en que las empresas adoptan tecnologías de IA para resolver problemas complejos y mejorar la colaboración.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Los desarrolladores pueden utilizar agentes de IA para automatizar tareas repetitivas, mejorar la documentación del código y facilitar la comunicación entre equipos. Además, estas herramientas pueden ayudar en la generación de código y en la depuración, lo que permite un enfoque más ágil en el desarrollo.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de sus ventajas, la dependencia de agentes de IA puede generar preocupaciones sobre la calidad del código y la pérdida de habilidades humanas. También existe el riesgo de que la automatización no se adapte a todos los contextos de desarrollo, lo que podría limitar su efectividad.</p></div>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Endava ha implementado agentes de inteligencia artificial, incluyendo ChatGPT Enterprise y Codex, para optimizar su proceso de entrega de software. Esta estrategia busca automatizar flujos de trabajo y fomentar una cultura empresarial centrada en la IA.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La integración de agentes de IA en el desarrollo de software puede reducir significativamente los tiempos de entrega y mejorar la calidad del código. Esto es especialmente relevante en un contexto donde la agilidad y la eficiencia son cruciales para la competitividad en el mercado tecnológico.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las empresas pueden aplicar estos enfoques para automatizar tareas repetitivas en el desarrollo, como la generación de código y la revisión de errores. Además, podrían facilitar la colaboración entre equipos al utilizar agentes de IA para gestionar y coordinar proyectos.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, la dependencia de agentes de IA puede generar riesgos, como la falta de control sobre decisiones críticas y la posible introducción de sesgos en el código. También es importante considerar la necesidad de capacitación continua para los equipos en el uso de estas herramientas avanzadas.</p></div>
       <div class="section question">
         <h3>💬 Pregunta para la comunidad</h3>
-        <p>¿Deberían las empresas confiar en agentes de IA para la entrega de software, o es fundamental mantener un equilibrio con la intervención humana para garantizar la calidad y la innovación en el desarrollo?</p>
+        <p>¿Deberían las empresas priorizar la integración de agentes de IA en sus flujos de trabajo de desarrollo de software a pesar de los riesgos asociados, como la falta de control y los sesgos potenciales, o es más prudente mantener un enfoque humano en la toma de decisiones críticas?</p>
       </div>
       <div class="card-foot"><a class="source" href="https://openai.com/index/endava-frontiers" target="_blank" rel="noopener">🔗 OpenAI Blog</a></div>
     </article>
@@ -106,36 +122,23 @@
         <span class="rank">relevancia 85/100</span>
       </div>
       <h2 class="card-title"><span class="num">2.</span> <a href="https://openai.com/index/chatgpt-memory-dreaming" target="_blank" rel="noopener">ChatGPT implementa un nuevo sistema de memoria</a></h2>
-      <div class="section"><h3>🔍 Qué ha pasado</h3><p>OpenAI ha anunciado la incorporación de un sistema de memoria en ChatGPT, que permitirá al modelo recordar preferencias y mantener el contexto relevante a lo largo de las conversaciones. Esta actualización busca mejorar la interacción del usuario al hacerla más personalizada y coherente.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La capacidad de recordar información entre sesiones es un avance significativo en la interacción con modelos de IA, ya que permite una experiencia más fluida y adaptada a las necesidades del usuario. Esto podría facilitar tareas complejas que requieren seguimiento y contexto continuado.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Este sistema de memoria puede ser utilizado en aplicaciones que requieren un alto grado de personalización, como asistentes virtuales, plataformas de aprendizaje adaptativo o servicios de atención al cliente, donde la continuidad en la conversación es crucial.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, la implementación de un sistema de memoria plantea desafíos en términos de privacidad y seguridad de los datos. Además, es necesario garantizar que la memoria se gestione de manera eficiente para evitar confusiones o malentendidos en las interacciones.</p></div>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>OpenAI ha presentado un nuevo sistema de memoria para ChatGPT que le permitirá recordar las preferencias de los usuarios y mantener el contexto relevante a lo largo de las conversaciones. Esta actualización busca mejorar la experiencia del usuario al hacer las interacciones más personalizadas.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>El desarrollo de un sistema de memoria en modelos de lenguaje es un avance significativo, ya que permite una continuidad en las conversaciones y una mejor adaptación a las necesidades del usuario. Esto podría transformar la manera en que interactuamos con los asistentes virtuales, haciéndolos más útiles y eficientes.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Este sistema de memoria podría ser implementado en aplicaciones de atención al cliente, donde el asistente recordaría las interacciones previas para ofrecer respuestas más precisas. También podría ser útil en entornos educativos, donde se podría personalizar el aprendizaje de los estudiantes basándose en sus preferencias y progreso anterior.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, la implementación de memoria plantea desafíos relacionados con la privacidad y la seguridad de los datos del usuario. Además, es crucial garantizar que el sistema no almacene información irrelevante o sensible, lo que podría afectar la confianza del usuario en la herramienta.</p></div>
       <div class="section question">
         <h3>💬 Pregunta para la comunidad</h3>
-        <p>¿Cómo deberían equilibrarse la personalización de la experiencia del usuario y la privacidad en el diseño de sistemas de memoria para IA, y cuáles son los riesgos y beneficios de cada enfoque?</p>
+        <p>¿Cómo deberían los desarrolladores abordar el equilibrio entre la personalización de la experiencia del usuario a través de la memoria en IA y la necesidad de proteger la privacidad y los datos sensibles de los usuarios?</p>
       </div>
       <div class="card-foot"><a class="source" href="https://openai.com/index/chatgpt-memory-dreaming" target="_blank" rel="noopener">🔗 OpenAI Blog</a></div>
-    </article>
-    <article class="card" style="--accent: #f59e0b">
-      <div class="card-head">
-        <span class="badge">Automation</span>
-        <span class="rank">relevancia 85/100</span>
-      </div>
-      <h2 class="card-title"><span class="num">3.</span> <a href="https://openai.com/index/codex-for-knowledge-work" target="_blank" rel="noopener">Codex: Transformando la productividad en el trabajo del conocimiento</a></h2>
-      <div class="section"><h3>🔍 Qué ha pasado</h3><p>OpenAI ha publicado un informe que detalla cómo Codex está revolucionando la productividad en el ámbito del trabajo del conocimiento. Esta herramienta utiliza IA para mejorar la investigación, el análisis de datos, la automatización de flujos de trabajo y la creación de contenido.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La relevancia de Codex radica en su capacidad para optimizar tareas que tradicionalmente consumen mucho tiempo, permitiendo a los profesionales centrarse en actividades de mayor valor. Su integración en diversas plataformas puede transformar la forma en que se aborda el trabajo intelectual.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Codex puede ser utilizado para automatizar informes, generar resúmenes de datos complejos, y facilitar la creación de contenido técnico o creativo. Esto podría ser particularmente útil en sectores como la investigación, el marketing y el desarrollo de software.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de sus capacidades, Codex puede enfrentar limitaciones en la comprensión del contexto específico de cada tarea y en la calidad de las salidas generadas. Además, la dependencia excesiva de la automatización podría afectar la creatividad y el juicio crítico de los profesionales.</p></div>
-      <div class="section question">
-        <h3>💬 Pregunta para la comunidad</h3>
-        <p>¿Cómo debería equilibrarse la implementación de herramientas como Codex en el trabajo del conocimiento para maximizar la productividad sin sacrificar la creatividad y el juicio crítico de los profesionales?</p>
-      </div>
-      <div class="card-foot"><a class="source" href="https://openai.com/index/codex-for-knowledge-work" target="_blank" rel="noopener">🔗 OpenAI Blog</a></div>
     </article>
     <article class="card" style="--accent: #16a34a">
       <div class="card-head">
         <span class="badge">Open Source</span>
         <span class="rank">relevancia 85/100</span>
       </div>
-      <h2 class="card-title"><span class="num">4.</span> <a href="https://huggingface.co/blog/ServiceNow-AI/eva-bench-data" target="_blank" rel="noopener">EVA-Bench Data 2.0: Un recurso ampliado para evaluar herramientas de IA</a></h2>
-      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se ha lanzado EVA-Bench Data 2.0, una actualización que incluye tres dominios, 121 herramientas y 213 escenarios de evaluación. Este recurso es parte de un esfuerzo por mejorar la evaluación de modelos de inteligencia artificial en diferentes contextos.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La diversidad de herramientas y escenarios permite a los desarrolladores realizar comparaciones más precisas y relevantes entre diferentes modelos de IA. Esto es crucial para seleccionar la mejor solución para problemas específicos y fomentar la innovación en el campo.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Los ingenieros pueden utilizar EVA-Bench Data 2.0 para realizar pruebas de rendimiento en sus modelos, ajustando parámetros y comparando resultados en escenarios del mundo real. Además, puede servir como base para desarrollar nuevas herramientas o mejorar las existentes.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de su amplitud, es posible que algunos dominios o herramientas no estén completamente representados, lo que podría limitar la aplicabilidad en casos específicos. También es importante considerar la calidad de los datos y su relevancia para los escenarios de evaluación elegidos.</p></div>
+      <h2 class="card-title"><span class="num">3.</span> <a href="https://huggingface.co/blog/ServiceNow-AI/eva-bench-data" target="_blank" rel="noopener">EVA-Bench Data 2.0: Un recurso ampliado para evaluar herramientas de IA</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se ha lanzado EVA-Bench Data 2.0, una actualización que incluye datos de 121 herramientas de IA en 3 dominios y 213 escenarios de evaluación. Este conjunto de datos es una herramienta útil para investigadores y desarrolladores que buscan comparar y analizar el rendimiento de diferentes soluciones de IA.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La disponibilidad de un recurso tan completo facilita la estandarización en la evaluación de herramientas de IA, permitiendo a los desarrolladores tomar decisiones informadas sobre qué soluciones implementar. Además, fomenta la transparencia en el rendimiento de las herramientas, lo que es crucial en un campo en rápida evolución como la inteligencia artificial.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Los desarrolladores pueden utilizar EVA-Bench Data 2.0 para realizar pruebas comparativas de sus modelos y herramientas, optimizando así su implementación en aplicaciones reales. También puede servir como base para nuevos estudios de investigación en el ámbito de la inteligencia artificial y su evaluación.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de su amplitud, el conjunto de datos puede no cubrir todos los casos de uso específicos de ciertas industrias. Además, la interpretación de los resultados puede depender de la calidad de los datos y de la metodología utilizada en las evaluaciones.</p></div>
       <div class="section question">
         <h3>💬 Pregunta para la comunidad</h3>
-        <p>¿Cómo puede la inclusión de herramientas y escenarios en EVA-Bench Data 2.0 influir en la forma en que los desarrolladores priorizan la calidad de los datos frente a la diversidad de modelos en sus evaluaciones de IA?</p>
+        <p>¿Cómo debería la comunidad de desarrolladores abordar las limitaciones de EVA-Bench Data 2.0 en relación con casos de uso específicos de la industria, y qué estrategias podrían implementarse para complementar este recurso?</p>
       </div>
       <div class="card-foot"><a class="source" href="https://huggingface.co/blog/ServiceNow-AI/eva-bench-data" target="_blank" rel="noopener">🔗 Hugging Face Blog</a></div>
     </article>
@@ -144,11 +147,11 @@
         <span class="badge">Research</span>
         <span class="rank">relevancia 85/100</span>
       </div>
-      <h2 class="card-title"><span class="num">5.</span> <a href="https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots" target="_blank" rel="noopener">Optimización de Preferencias Directas: Más Allá de los Chatbots</a></h2>
-      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Hugging Face ha presentado un enfoque innovador llamado &#x27;Optimización de Preferencias Directas&#x27; (DPO), que mejora la alineación de modelos de IA con las preferencias humanas. Este método se ha desarrollado inicialmente para chatbots, pero su aplicación se está expandiendo a otros ámbitos de la inteligencia artificial.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La DPO permite a los modelos aprender de manera más efectiva las preferencias humanas, lo que resulta en interacciones más naturales y satisfactorias. Esto es crucial en contextos donde la alineación con el usuario es fundamental, como en asistentes virtuales y sistemas de recomendación.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Este enfoque puede ser utilizado en la creación de sistemas de recomendación personalizados, en la mejora de la interacción en interfaces de usuario y en el desarrollo de agentes conversacionales que comprendan mejor las intenciones del usuario. También podría aplicarse en la optimización de contenido en plataformas de streaming y redes sociales.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de sus ventajas, la DPO puede enfrentar desafíos en la generalización a contextos no entrenados y en la captura de preferencias complejas. Además, la implementación de este enfoque requiere un manejo cuidadoso de los datos de entrenamiento para evitar sesgos.</p></div>
+      <h2 class="card-title"><span class="num">4.</span> <a href="https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots" target="_blank" rel="noopener">Optimización de preferencias directas más allá de chatbots</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Hugging Face ha presentado un enfoque innovador de optimización de preferencias directas que se extiende más allá de los chatbots. Este método permite a los modelos de IA aprender de manera más efectiva las preferencias de los usuarios a través de interacciones directas.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Esta técnica es relevante porque mejora la capacidad de los modelos para ajustarse a las necesidades específicas de los usuarios, lo que puede resultar en interacciones más naturales y satisfactorias. Además, plantea un avance en la forma en que se entrenan los modelos de lenguaje, permitiendo un aprendizaje más dinámico y adaptado.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las aplicaciones prácticas incluyen la personalización de asistentes virtuales, la mejora de sistemas de recomendación y la adaptación de interfaces de usuario en tiempo real. Esto puede llevar a experiencias más intuitivas y alineadas con las expectativas del usuario.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, este enfoque puede enfrentar desafíos en la recolección de datos de preferencias precisos y en la gestión de sesgos inherentes. Además, la implementación requiere un diseño cuidadoso para evitar malentendidos en las interacciones del usuario.</p></div>
       <div class="section question">
         <h3>💬 Pregunta para la comunidad</h3>
-        <p>¿Cuáles son los riesgos y beneficios de aplicar la Optimización de Preferencias Directas en contextos más allá de los chatbots, y cómo podemos mitigar los posibles sesgos en la captura de preferencias complejas?</p>
+        <p>¿Cuáles son los principales retos éticos y técnicos que enfrentan los modelos de IA al optimizar preferencias directas en interacciones con usuarios, y cómo podrían abordarse para evitar sesgos y malentendidos?</p>
       </div>
       <div class="card-foot"><a class="source" href="https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots" target="_blank" rel="noopener">🔗 Hugging Face Blog</a></div>
     </article>
@@ -157,21 +160,30 @@
         <span class="badge">Robotics</span>
         <span class="rank">relevancia 75/100</span>
       </div>
-      <h2 class="card-title"><span class="num">6.</span> <a href="https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini" target="_blank" rel="noopener">Integración de herramientas MCP en Reachy Mini</a></h2>
-      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se han añadido herramientas MCP (Motor Control Protocol) al robot Reachy Mini, lo que mejora su capacidad de control y manipulación. Esta actualización permite una interacción más precisa y eficiente con su entorno.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La incorporación de MCP en Reachy Mini es relevante porque optimiza el control de motores, facilitando la implementación de tareas complejas en robótica. Esto abre nuevas posibilidades para el desarrollo de aplicaciones robóticas más avanzadas y personalizables.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las herramientas MCP pueden ser utilizadas para desarrollar robots que realicen tareas de manipulación en entornos industriales, así como en investigación sobre interacción humano-robot. Además, se pueden aplicar en la educación para enseñar conceptos de control de motores y robótica.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de las mejoras, la implementación de MCP puede requerir un conocimiento técnico avanzado para su configuración. También, la dependencia de protocolos específicos puede limitar la interoperabilidad con otros sistemas o plataformas.</p></div>
+      <h2 class="card-title"><span class="num">5.</span> <a href="https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini" target="_blank" rel="noopener">Integración de herramientas MCP en Reachy Mini</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se ha añadido soporte para herramientas MCP (Multi-Channel Perception) en el robot Reachy Mini. Esto permite al robot mejorar su percepción y manipulación al interactuar con su entorno de manera más efectiva.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La incorporación de herramientas MCP en robots como Reachy Mini es importante porque amplía las capacidades sensoriales y operativas del robot. Esto permite una mejor interacción en entornos dinámicos, lo que es crucial para aplicaciones en robótica colaborativa y automatización.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Con estas herramientas, los desarrolladores pueden crear aplicaciones que requieren manipulación precisa o interacción con objetos en entornos variados, como en la logística o en la atención al cliente. Además, se pueden implementar en proyectos de investigación sobre percepción robótica.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, la implementación de estas herramientas puede requerir un ajuste fino y una calibración específica para cada aplicación. Además, el costo y la complejidad del sistema pueden ser un obstáculo para su adopción masiva.</p></div>
       <div class="section question">
         <h3>💬 Pregunta para la comunidad</h3>
-        <p>¿Cómo crees que la dependencia de herramientas como MCP puede afectar la interoperabilidad en proyectos de robótica colaborativa, y cuáles podrían ser las implicaciones de esta especialización en el desarrollo a largo plazo?</p>
+        <p>¿Qué opinan sobre el equilibrio entre la complejidad y el costo de implementar herramientas MCP en robots como Reachy Mini, y cómo podrían estas limitaciones influir en su adopción en entornos comerciales versus de investigación?</p>
       </div>
       <div class="card-foot"><a class="source" href="https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini" target="_blank" rel="noopener">🔗 Hugging Face Blog</a></div>
     </article>
+    <article class="card" style="--accent: #f59e0b">
+      <div class="card-head">
+        <span class="badge">Automation</span>
+        <span class="rank">relevancia 50/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">6.</span> <a href="https://arstechnica.com/ai/2026/06/how-data-center-operators-are-tackling-their-water-use-problems/" target="_blank" rel="noopener">Operadores de centros de datos enfrentan desafíos de uso de agua</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Los operadores de centros de datos, especialmente los hiperescaladores, están siendo cuestionados por su impacto en la calidad y disponibilidad del agua. Se están implementando estrategias para abordar estos problemas y minimizar su huella hídrica.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La gestión del agua es crucial para la sostenibilidad de las operaciones de centros de datos, ya que su refrigeración consume grandes cantidades de este recurso. Mejorar la eficiencia en el uso del agua puede ayudar a mitigar el impacto ambiental y cumplir con regulaciones cada vez más estrictas.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las soluciones incluyen el uso de tecnologías de refrigeración más eficientes y sistemas de reciclaje de agua. Esto no solo reduce el consumo de agua, sino que también puede mejorar la eficiencia operativa y reducir costos a largo plazo.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, la implementación de estas soluciones puede ser costosa y requerir tiempo. Además, la disponibilidad de tecnologías adecuadas puede variar según la ubicación geográfica de los centros de datos.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Qué estrategias innovadoras podrían implementar los centros de datos para reducir su consumo de agua sin comprometer su eficiencia operativa, y cuáles podrían ser los obstáculos más significativos para su adopción?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://arstechnica.com/ai/2026/06/how-data-center-operators-are-tackling-their-water-use-problems/" target="_blank" rel="noopener">🔗 Ars Technica AI</a></div>
+    </article>
     <footer>
       <p class="org">Asociación Nacional Faro, para la Aceleración de la Inteligencia Artificial</p>
-      <p>
-        Generado el 06/06/2026 12:38 ·
-        <a href="https://anfaia.org" target="_blank" rel="noopener">anfaia.org</a>
-        · Anfaia Weekly AI
-      </p>
+      <p>Generado el 06/06/2026 13:12 · <a href="https://anfaia.org" target="_blank" rel="noopener">anfaia.org</a> · Anfaia Weekly AI</p>
     </footer>
   </div>
 </body>
