@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <title>Semana del 15 al 21 de junio de 2026 · Anfaia Weekly AI</title>
+  <link rel="icon" href="https://anfaia.org/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      --blue-50:#eff6ff; --blue-100:#dbeafe; --blue-500:#3b82f6; --blue-600:#2563eb;
+      --blue-700:#1d4ed8; --blue-900:#1e3a8a; --indigo-600:#4f46e5;
+      --slate-900:#0f172a; --gray-700:#374151; --gray-500:#6b7280; --gray-200:#e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; background:var(--blue-50); color:var(--slate-900);
+      font-family:'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      line-height:1.6; -webkit-font-smoothing:antialiased;
+    }
+    a { color:var(--blue-700); }
+    .wrap { position:relative; z-index:1; max-width:820px; margin:0 auto; padding:0 20px 64px; }
+    header.hero {
+      position:relative;
+      background:linear-gradient(135deg, var(--blue-700) 0%, var(--indigo-600) 100%);
+      color:#fff; padding:40px 20px 48px; text-align:center;
+    }
+    .hero .backlink {
+      position:absolute; left:16px; top:16px; background:rgba(255,255,255,.15); color:#fff;
+      text-decoration:none; font-size:.85rem; font-weight:600; padding:6px 12px;
+      border-radius:999px;
+    }
+    .hero .backlink:hover { background:rgba(255,255,255,.28); }
+    .hero .brand { display:flex; justify-content:center; margin-bottom:12px; }
+    .hero .logo { height:72px; background:#fff; border-radius:14px; padding:10px 16px; }
+    .hero .tagline { opacity:.85; font-size:.9rem; font-weight:500; margin-bottom:6px; }
+    .hero h1 { font-size:2rem; font-weight:800; margin:8px 0 6px; letter-spacing:-.02em; }
+    .hero .sub { opacity:.9; font-weight:500; }
+    .intro {
+      background:#fff; border:1px solid var(--gray-200); border-radius:16px;
+      padding:18px 22px; margin:-28px auto 28px; box-shadow:0 10px 30px rgba(30,58,138,.10);
+      color:var(--gray-700); font-weight:500;
+    }
+    .podcast {
+      background:linear-gradient(135deg, var(--blue-700) 0%, var(--indigo-600) 100%);
+      color:#fff; border-radius:16px; padding:18px 22px; margin:0 auto 28px;
+      box-shadow:0 10px 30px rgba(30,58,138,.16);
+    }
+    .podcast h2 { margin:0 0 10px; font-size:1.05rem; font-weight:700; }
+    .podcast audio { width:100%; }
+    .card {
+      background:#fff; border:1px solid var(--gray-200); border-left:5px solid var(--accent);
+      border-radius:16px; padding:24px 26px; margin:0 0 22px;
+      box-shadow:0 6px 20px rgba(15,23,42,.06);
+    }
+    .card-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+    .badge {
+      background:var(--accent); color:#fff; font-size:.72rem; font-weight:700;
+      text-transform:uppercase; letter-spacing:.04em; padding:3px 10px; border-radius:999px;
+    }
+    .rank { color:var(--gray-500); font-size:.78rem; font-weight:600; }
+    .card-title {
+      font-size:1.3rem; font-weight:700; line-height:1.3; margin:6px 0 16px; letter-spacing:-.01em;
+    }
+    .card-title a { color:var(--slate-900); text-decoration:none; }
+    .card-title a:hover { color:var(--blue-700); }
+    .card-title .num { color:var(--accent); }
+    .section { margin:14px 0; }
+    .section h3 { font-size:.95rem; font-weight:700; margin:0 0 4px; color:var(--blue-900); }
+    .section p { margin:0; color:var(--gray-700); }
+    .section.question {
+      background:var(--blue-50); border-radius:12px; padding:14px 16px; margin-top:18px;
+    }
+    .section.question h3 { color:var(--blue-700); }
+    .card-foot {
+      margin-top:16px; padding-top:14px; border-top:1px solid var(--gray-200); font-size:.85rem;
+    }
+    .source { color:var(--blue-700); font-weight:600; text-decoration:none; }
+    .editions { display:flex; flex-direction:column; gap:12px; margin-top:24px; }
+    .edition {
+      display:flex; align-items:center; gap:12px; background:#fff; border:1px solid var(--gray-200);
+      border-left:5px solid var(--blue-600); border-radius:14px; padding:16px 20px;
+      text-decoration:none; color:var(--slate-900); box-shadow:0 6px 20px rgba(15,23,42,.06);
+    }
+    .edition:hover { border-left-color:var(--indigo-600); }
+    .edition-week { font-weight:700; flex:1; }
+    .edition-meta { color:var(--gray-500); font-size:.85rem; }
+    .edition-go { color:var(--blue-700); font-weight:700; }
+    .empty { text-align:center; color:var(--gray-500); margin-top:32px; }
+    footer { text-align:center; color:var(--gray-500); font-size:.82rem; padding:8px 20px; }
+    footer .org { font-weight:600; color:var(--gray-700); }
+    footer a { color:var(--blue-700); text-decoration:none; }
+    @media (max-width:520px) { .hero h1 { font-size:1.6rem; } .card { padding:20px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <a class="backlink" href="../index.html">← Índice</a>
+    <div class="brand">
+      <img class="logo" src="https://anfaia.org/ANFAIA_logo_web.png" alt="Anfaia">
+    </div>
+    <div class="tagline">Driving Progress with Artificial Intelligence</div>
+    <h1>Boletín de Anfaia sobre noticias de IA</h1>
+    <div class="sub">Semana del 15 al 21 de junio de 2026</div>
+  </header>
+  <div class="wrap">
+    <div class="intro">Esta semana, el boletín de Anfaia Weekly AI se centra en la evolución de la inteligencia artificial en diversos sectores, destacando la integración de modelos multimodales y la mejora de herramientas para desarrolladores. Las adquisiciones estratégicas y la investigación en seguridad reflejan una creciente preocupación por la sostenibilidad y la seguridad de los sistemas de IA, especialmente en entornos empresariales y multi-agente. A medida que la automatización y la robótica avanzan, es crucial que la comunidad técnica aborde tanto las oportunidades como los riesgos que surgen de estas innovaciones.</div>
+    
+    <article class="card" style="--accent: #2563eb">
+      <div class="card-head">
+        <span class="badge">AI</span>
+        <span class="rank">relevancia 90/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">1.</span> <a href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/" target="_blank" rel="noopener">Gemma 4 12B: un modelo multimodal sin codificadores para laptops</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Google DeepMind ha lanzado Gemma 4 12B, un modelo multimodal diseñado para operar eficientemente en laptops. Este modelo destaca por su arquitectura unificada y su capacidad para procesar entradas de audio y visuales sin necesidad de codificadores separados.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La eliminación de codificadores tradicionales reduce la latencia y el uso de memoria, permitiendo un rendimiento comparable al modelo de 26B pero con un menor consumo de recursos. Esto democratiza el acceso a inteligencia multimodal avanzada en hardware común.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Gemma 4 12B puede ser utilizado en aplicaciones que requieren procesamiento de audio y visual, como asistentes virtuales, sistemas de seguridad basados en IA y herramientas de creación de contenido multimedia. Los desarrolladores pueden integrar este modelo en diversas plataformas y herramientas de desarrollo.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de su eficiencia, el modelo puede tener limitaciones en el manejo de tareas extremadamente complejas o en escenarios que requieren un procesamiento intensivo de datos. Además, su rendimiento puede variar dependiendo del hardware específico utilizado.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Crees que la eliminación de codificadores en modelos multimodales como Gemma 4 12B es el futuro del diseño de IA, o crees que los codificadores seguirán siendo necesarios para tareas complejas y de alto rendimiento?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/" target="_blank" rel="noopener">🔗 Google DeepMind Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #6366f1">
+      <div class="card-head">
+        <span class="badge">Agents</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">2.</span> <a href="https://openai.com/index/openai-to-acquire-ona" target="_blank" rel="noopener">OpenAI adquiere Ona para potenciar Codex en entornos empresariales</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>OpenAI ha anunciado su intención de adquirir Ona, una medida que busca fortalecer su plataforma Codex. Esta adquisición permitirá la creación de entornos en la nube seguros y persistentes, facilitando el desarrollo de agentes de IA que operen a largo plazo en flujos de trabajo empresariales.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Esta integración es significativa porque Codex se beneficiará de la capacidad de gestionar agentes de IA que puedan funcionar de manera continua y segura en entornos corporativos. Esto abre nuevas oportunidades para la automatización y la optimización de procesos en empresas, mejorando la eficiencia operativa.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Los desarrolladores podrían utilizar estas capacidades para implementar agentes de IA que realicen tareas complejas y prolongadas, como la gestión de proyectos o la atención al cliente, en plataformas empresariales. Además, se podrían crear soluciones personalizadas que se adapten a las necesidades específicas de cada organización.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, la implementación de estos agentes a largo plazo plantea desafíos en términos de seguridad y gestión de datos. Es crucial abordar las preocupaciones sobre la privacidad y la integridad de la información en entornos empresariales antes de su adopción generalizada.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Cuáles son los principales desafíos éticos y de seguridad que deben considerarse al implementar agentes de IA como Codex en entornos empresariales, y cómo podrían abordarse?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://openai.com/index/openai-to-acquire-ona" target="_blank" rel="noopener">🔗 OpenAI Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #4338ca">
+      <div class="card-head">
+        <span class="badge">Research</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">3.</span> <a href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/" target="_blank" rel="noopener">DeepMind impulsa la investigación en seguridad de IA multi-agente</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Google DeepMind, junto con varias organizaciones, ha lanzado una convocatoria de financiación de hasta $10 millones para investigar la seguridad en sistemas de IA multi-agente. Este esfuerzo busca abordar los riesgos emergentes de la interacción entre múltiples agentes autónomos en entornos digitales.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>A medida que la IA se integra en más aspectos de la vida digital, la seguridad de las interacciones entre agentes se vuelve crítica. La investigación en este campo es necesaria para prever comportamientos colectivos no deseados y garantizar que los sistemas operen de manera segura y predecible.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las aplicaciones prácticas incluyen la creación de entornos de prueba para evaluar la seguridad de los agentes, el desarrollo de protocolos para interacciones seguras y la implementación de sistemas de monitoreo que mitiguen riesgos a gran escala en poblaciones de agentes.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Aún existen incertidumbres sobre cómo emergen los comportamientos colectivos en sistemas de múltiples agentes y sobre la efectividad de los modelos de seguridad actuales. Además, la necesidad de una colaboración amplia entre investigadores puede complicar la coordinación y el enfoque en soluciones efectivas.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Cuáles son los principales desafíos que enfrentan los investigadores al desarrollar modelos de seguridad para sistemas de IA multi-agente, y cómo podrían abordarse para garantizar interacciones seguras y predecibles entre los agentes?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research/" target="_blank" rel="noopener">🔗 Google DeepMind Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #16a34a">
+      <div class="card-head">
+        <span class="badge">Open Source</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">4.</span> <a href="https://huggingface.co/blog/allenai/olmo-eval" target="_blank" rel="noopener">Olmo-eval: Una nueva herramienta para la evaluación de modelos LLM</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se ha lanzado olmo-eval, un entorno de evaluación diseñado específicamente para el ciclo de desarrollo de modelos de lenguaje. Esta herramienta permite a los desarrolladores implementar y configurar evaluaciones de manera más eficiente y flexible, superando las limitaciones de las herramientas existentes como OLMES y Harbor.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Olmo-eval es relevante porque facilita la evaluación continua de modelos en desarrollo, permitiendo ajustes y análisis más precisos en cada iteración. Su diseño modular permite a los investigadores adaptar rápidamente las evaluaciones a diferentes configuraciones y condiciones, lo que es crucial en un campo tan dinámico como el de los modelos de lenguaje.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Los desarrolladores pueden utilizar olmo-eval para crear benchmarks personalizados que se ajusten a sus necesidades específicas, facilitando la comparación de resultados entre diferentes versiones del modelo. También es útil para realizar análisis más profundos sobre el impacto de cambios menores en el rendimiento del modelo.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Aunque olmo-eval ofrece mayor flexibilidad, puede requerir una curva de aprendizaje para aquellos acostumbrados a herramientas más rígidas. Además, su efectividad depende de la calidad de los benchmarks implementados, lo que puede variar según el contexto de uso.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Qué ventajas y desventajas crees que presenta olmo-eval en comparación con herramientas más establecidas como OLMES y Harbor, especialmente en términos de flexibilidad y curva de aprendizaje para los desarrolladores?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://huggingface.co/blog/allenai/olmo-eval" target="_blank" rel="noopener">🔗 Hugging Face Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #f59e0b">
+      <div class="card-head">
+        <span class="badge">Automation</span>
+        <span class="rank">relevancia 75/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">5.</span> <a href="https://openai.com/index/nextdoor" target="_blank" rel="noopener">Nextdoor optimiza su desarrollo con Codex y GPT-5.5</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Los ingenieros de Nextdoor han comenzado a utilizar Codex junto con GPT-5.5 para abordar problemas difíciles de reproducir y desarrollar en múltiples plataformas. Esta integración les permite centrarse en los resultados del producto.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>El uso de Codex en combinación con GPT-5.5 representa un avance significativo en la automatización del desarrollo de software, facilitando la resolución de problemas complejos y mejorando la eficiencia del trabajo en equipo. Esto puede transformar la manera en que los ingenieros abordan el desarrollo y la depuración de sus aplicaciones.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las aplicaciones prácticas incluyen la generación automática de código, la asistencia en la depuración y la creación de soluciones multiplataforma de manera más ágil. Esto podría permitir a los desarrolladores enfocarse más en la innovación y menos en tareas repetitivas.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, el uso de estas herramientas aún puede presentar desafíos, como la dependencia de la calidad de los datos de entrenamiento y la necesidad de supervisión humana para evitar errores en el código generado. Además, la integración con sistemas existentes puede requerir ajustes significativos.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Creen que la dependencia de herramientas como Codex y GPT-5.5 puede llevar a una pérdida de habilidades fundamentales en los desarrolladores, o por el contrario, estas herramientas permitirán a los ingenieros enfocarse en tareas más creativas y estratégicas?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://openai.com/index/nextdoor" target="_blank" rel="noopener">🔗 OpenAI Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #eb459e">
+      <div class="card-head">
+        <span class="badge">Robotics</span>
+        <span class="rank">relevancia 75/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">6.</span> <a href="https://arstechnica.com/ai/2026/06/ukraines-one-time-test-used-fully-autonomous-drones-to-kill-russian-soldiers/" target="_blank" rel="noopener">Ucrania prueba drones autónomos en combate: implicaciones y riesgos</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Durante una prueba de campo hace dos años, drones autónomos de Ucrania supuestamente mataron soldados rusos. Esta información fue revelada por el CEO de Aero Center, quien mencionó que los drones estaban programados para activar un modo de ataque sin intervención humana.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Este incidente pone de relieve el avance en el uso de drones militares y la integración de IA en sistemas de armamento. Aunque Ucrania actualmente prohíbe el uso de IA en la fase final de interceptación, esto plantea preguntas sobre la definición y regulación de armas autónomas letales a nivel internacional.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las lecciones de este experimento podrían influir en el desarrollo de drones con capacidades autónomas que complementen la toma de decisiones humanas, mejorando la eficacia de las operaciones militares. Además, la tecnología de navegación autónoma ya está siendo utilizada para aumentar la tasa de éxito de los ataques de drones.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>El uso de drones completamente autónomos conlleva riesgos significativos, como el potencial de fuego amigo y ataques a civiles. Además, la falta de datos sobre la efectividad real de estos drones en comparación con los operados por humanos genera dudas sobre su viabilidad en el campo de batalla.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Deberían los desarrolladores de IA centrarse en crear sistemas de drones militares autónomos, a pesar de los riesgos éticos y legales asociados, o es preferible seguir confiando en el control humano en el campo de batalla?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://arstechnica.com/ai/2026/06/ukraines-one-time-test-used-fully-autonomous-drones-to-kill-russian-soldiers/" target="_blank" rel="noopener">🔗 Ars Technica AI</a></div>
+    </article>
+    <footer>
+      <p class="org">Asociación Nacional Faro, para la Aceleración de la Inteligencia Artificial</p>
+      <p>Generado el 15/06/2026 09:30 · <a href="https://anfaia.org" target="_blank" rel="noopener">anfaia.org</a> · Anfaia Weekly AI</p>
+    </footer>
+  </div>
+</body>
+</html>
