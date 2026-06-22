@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <title>Semana del 15 al 21 de junio de 2026 · Anfaia Weekly AI</title>
+  <link rel="icon" href="https://anfaia.org/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      --blue-50:#eff6ff; --blue-100:#dbeafe; --blue-500:#3b82f6; --blue-600:#2563eb;
+      --blue-700:#1d4ed8; --blue-900:#1e3a8a; --indigo-600:#4f46e5;
+      --slate-900:#0f172a; --gray-700:#374151; --gray-500:#6b7280; --gray-200:#e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; background:var(--blue-50); color:var(--slate-900);
+      font-family:'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      line-height:1.6; -webkit-font-smoothing:antialiased;
+    }
+    a { color:var(--blue-700); }
+    .wrap { position:relative; z-index:1; max-width:820px; margin:0 auto; padding:0 20px 64px; }
+    header.hero {
+      position:relative;
+      background:linear-gradient(135deg, var(--blue-700) 0%, var(--indigo-600) 100%);
+      color:#fff; padding:40px 20px 48px; text-align:center;
+    }
+    .hero .backlink {
+      position:absolute; left:16px; top:16px; background:rgba(255,255,255,.15); color:#fff;
+      text-decoration:none; font-size:.85rem; font-weight:600; padding:6px 12px;
+      border-radius:999px;
+    }
+    .hero .backlink:hover { background:rgba(255,255,255,.28); }
+    .hero .brand { display:flex; justify-content:center; margin-bottom:12px; }
+    .hero .logo { height:72px; background:#fff; border-radius:14px; padding:10px 16px; }
+    .hero .tagline { opacity:.85; font-size:.9rem; font-weight:500; margin-bottom:6px; }
+    .hero h1 { font-size:2rem; font-weight:800; margin:8px 0 6px; letter-spacing:-.02em; }
+    .hero .sub { opacity:.9; font-weight:500; }
+    .intro {
+      background:#fff; border:1px solid var(--gray-200); border-radius:16px;
+      padding:18px 22px; margin:-28px auto 28px; box-shadow:0 10px 30px rgba(30,58,138,.10);
+      color:var(--gray-700); font-weight:500;
+    }
+    .podcast {
+      background:linear-gradient(135deg, var(--blue-700) 0%, var(--indigo-600) 100%);
+      color:#fff; border-radius:16px; padding:18px 22px; margin:0 auto 28px;
+      box-shadow:0 10px 30px rgba(30,58,138,.16);
+    }
+    .podcast h2 { margin:0 0 10px; font-size:1.05rem; font-weight:700; }
+    .podcast audio { width:100%; }
+    .card {
+      background:#fff; border:1px solid var(--gray-200); border-left:5px solid var(--accent);
+      border-radius:16px; padding:24px 26px; margin:0 0 22px;
+      box-shadow:0 6px 20px rgba(15,23,42,.06);
+    }
+    .card-head { display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+    .badge {
+      background:var(--accent); color:#fff; font-size:.72rem; font-weight:700;
+      text-transform:uppercase; letter-spacing:.04em; padding:3px 10px; border-radius:999px;
+    }
+    .rank { color:var(--gray-500); font-size:.78rem; font-weight:600; }
+    .card-title {
+      font-size:1.3rem; font-weight:700; line-height:1.3; margin:6px 0 16px; letter-spacing:-.01em;
+    }
+    .card-title a { color:var(--slate-900); text-decoration:none; }
+    .card-title a:hover { color:var(--blue-700); }
+    .card-title .num { color:var(--accent); }
+    .section { margin:14px 0; }
+    .section h3 { font-size:.95rem; font-weight:700; margin:0 0 4px; color:var(--blue-900); }
+    .section p { margin:0; color:var(--gray-700); }
+    .section.question {
+      background:var(--blue-50); border-radius:12px; padding:14px 16px; margin-top:18px;
+    }
+    .section.question h3 { color:var(--blue-700); }
+    .card-foot {
+      margin-top:16px; padding-top:14px; border-top:1px solid var(--gray-200); font-size:.85rem;
+    }
+    .source { color:var(--blue-700); font-weight:600; text-decoration:none; }
+    .editions { display:flex; flex-direction:column; gap:12px; margin-top:24px; }
+    .edition {
+      display:flex; align-items:center; gap:12px; background:#fff; border:1px solid var(--gray-200);
+      border-left:5px solid var(--blue-600); border-radius:14px; padding:16px 20px;
+      text-decoration:none; color:var(--slate-900); box-shadow:0 6px 20px rgba(15,23,42,.06);
+    }
+    .edition:hover { border-left-color:var(--indigo-600); }
+    .edition-week { font-weight:700; flex:1; }
+    .edition-meta { color:var(--gray-500); font-size:.85rem; }
+    .edition-go { color:var(--blue-700); font-weight:700; }
+    .empty { text-align:center; color:var(--gray-500); margin-top:32px; }
+    footer { text-align:center; color:var(--gray-500); font-size:.82rem; padding:8px 20px; }
+    footer .org { font-weight:600; color:var(--gray-700); }
+    footer a { color:var(--blue-700); text-decoration:none; }
+    @media (max-width:520px) { .hero h1 { font-size:1.6rem; } .card { padding:20px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <a class="backlink" href="../index.html">← Índice</a>
+    <div class="brand">
+      <img class="logo" src="https://anfaia.org/ANFAIA_logo_web.png" alt="Anfaia">
+    </div>
+    <div class="tagline">Driving Progress with Artificial Intelligence</div>
+    <h1>Boletín de Anfaia sobre noticias de IA</h1>
+    <div class="sub">Semana del 15 al 21 de junio de 2026</div>
+  </header>
+  <div class="wrap">
+    <div class="intro">Esta semana, el boletín de Anfaia Weekly AI destaca la creciente integración de la inteligencia artificial en diversos sectores, desde la automatización en el ámbito militar hasta la mejora de procesos en empresas como Samsung. Las innovaciones en modelos de predicción y en robótica reflejan una tendencia hacia la convergencia de la IA con aplicaciones prácticas, lo que sugiere un futuro donde la colaboración entre humanos y máquinas será cada vez más fluida. Estos desarrollos son cruciales para la comunidad técnica, ya que no solo demuestran el potencial de la IA, sino que también plantean nuevos desafíos éticos y operativos que deben ser abordados colectivamente.</div>
+    
+    <article class="card" style="--accent: #2563eb">
+      <div class="card-head">
+        <span class="badge">AI</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">1.</span> <a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank" rel="noopener">Samsung integra ChatGPT y Codex para sus empleados a nivel global</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Samsung Electronics ha implementado ChatGPT Enterprise y Codex para sus empleados en todo el mundo. Esta iniciativa representa uno de los despliegues más grandes de IA empresarial de OpenAI hasta la fecha.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La adopción de herramientas como ChatGPT y Codex en una empresa de tal magnitud subraya la creciente importancia de la IA generativa en entornos laborales. Esto puede transformar la productividad y la colaboración al ofrecer asistencia en la generación de texto y en la programación.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las aplicaciones prácticas incluyen la automatización de tareas administrativas, la creación de contenido técnico y la asistencia en el desarrollo de software. Esto puede liberar tiempo para que los empleados se concentren en tareas más estratégicas.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, es crucial considerar los riesgos relacionados con la privacidad de los datos y la calidad de las respuestas generadas por la IA. Además, la dependencia excesiva de estas herramientas podría afectar las habilidades de resolución de problemas de los empleados.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Qué implicaciones éticas y prácticas crees que conlleva la integración de herramientas de IA como ChatGPT y Codex en el entorno laboral, especialmente en términos de privacidad de datos y desarrollo de habilidades de los empleados?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank" rel="noopener">🔗 OpenAI Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #4338ca">
+      <div class="card-head">
+        <span class="badge">Research</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">2.</span> <a href="https://huggingface.co/blog/allenai/molmomotion" target="_blank" rel="noopener">MolmoMotion: Innovador modelo para prever movimientos 3D guiado por lenguaje</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se ha presentado MolmoMotion, un modelo de predicción de movimiento 3D que utiliza descripciones en lenguaje natural para anticipar la trayectoria de objetos en videos. Este modelo supera a las metodologías anteriores al predecir con precisión el movimiento de puntos 3D en un espacio tridimensional, basándose en instrucciones escritas y datos visuales.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>La capacidad de prever movimientos en lugar de solo observarlos abre nuevas posibilidades en robótica y generación de video. MolmoMotion combina técnicas de procesamiento de lenguaje natural con visión por computadora, permitiendo que sistemas automatizados comprendan y anticipen acciones en entornos dinámicos, lo que es un avance significativo en la interacción humano-máquina.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>MolmoMotion puede ser utilizado en aplicaciones de planificación robótica, donde los robots necesitan anticipar el movimiento de objetos para interactuar de manera efectiva. También es aplicable en la generación de videos controlados, donde se requiere que el contenido visual sea físicamente plausible y coherente con las acciones descritas.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de sus avances, MolmoMotion puede enfrentar desafíos en la predicción de movimientos complejos o en situaciones con múltiples posibles futuros. Además, su rendimiento depende de la calidad de las descripciones de acción y la precisión de los datos de entrada, lo que puede limitar su aplicabilidad en escenarios del mundo real.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Cuáles son los principales desafíos éticos y técnicos que enfrentamos al integrar modelos como MolmoMotion en aplicaciones del mundo real, especialmente en contextos donde la predicción de movimiento puede afectar la seguridad humana o la privacidad?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://huggingface.co/blog/allenai/molmomotion" target="_blank" rel="noopener">🔗 Hugging Face Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #6366f1">
+      <div class="card-head">
+        <span class="badge">Agents</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">3.</span> <a href="https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware" target="_blank" rel="noopener">Integración de LeRobot y Strands: De datos a robots físicos</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Se ha presentado una integración entre LeRobot y Strands Robots que permite llevar datos de demostración desde el Hugging Face Hub hasta robots físicos. Este proceso simplifica el flujo de trabajo al combinar herramientas en un solo ciclo de agente, facilitando la grabación, entrenamiento y despliegue de políticas en un entorno simulado y en hardware real.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Esta innovación es relevante porque unifica múltiples herramientas en un solo flujo de trabajo, eliminando la necesidad de diversas aplicaciones que no se comunican entre sí. Además, el uso de un formato de datos común para simulaciones y hardware real mejora la interoperabilidad y la eficiencia en el desarrollo de robots.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Los desarrolladores pueden utilizar esta integración para entrenar robots en tareas específicas a partir de demostraciones grabadas en simulación, y luego desplegar el mismo código en robots físicos con cambios mínimos. Esto es especialmente útil para aplicaciones en logística, manufactura y robótica asistencial, donde la adaptación rápida a nuevas tareas es crucial.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de sus ventajas, esta integración requiere una configuración inicial que puede ser compleja, especialmente para el despliegue en hardware real. Además, el rendimiento en simulación no siempre se traduce directamente al mundo físico, lo que puede requerir ajustes adicionales en las políticas de control.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Cuáles son los principales desafíos y riesgos que enfrenta la integración de herramientas de IA en el desarrollo de robots físicos, y cómo podrían afectar la adopción generalizada de estas tecnologías en la industria?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware" target="_blank" rel="noopener">🔗 Hugging Face Blog</a></div>
+    </article>
+    <article class="card" style="--accent: #16a34a">
+      <div class="card-head">
+        <span class="badge">Open Source</span>
+        <span class="rank">relevancia 85/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">4.</span> <a href="https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything" target="_blank" rel="noopener">GLM-5.2: El nuevo gigante de los LLMs de código abierto</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>El laboratorio chino Z.ai ha lanzado GLM-5.2, un modelo de lenguaje de 753 mil millones de parámetros con pesos abiertos bajo licencia MIT. Este modelo, que solo acepta texto como entrada, ha superado a sus predecesores en términos de capacidad y rendimiento, destacándose en varios índices de evaluación de inteligencia artificial.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>GLM-5.2 ofrece un contexto de 1 millón de tokens, lo que permite manejar interacciones más largas y complejas. Su rendimiento en benchmarks independientes la posiciona como la mejor opción en modelos de pesos abiertos, lo que podría influir en la adopción de modelos de código abierto en la industria.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Este modelo puede ser utilizado en una variedad de aplicaciones, desde generación de texto hasta tareas de programación, gracias a su alta capacidad de procesamiento. Además, su disponibilidad con pesos abiertos permite a los desarrolladores personalizar y adaptar el modelo a necesidades específicas sin costos elevados.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>A pesar de su potencia, GLM-5.2 es bastante &#x27;hambrienta&#x27; en términos de tokens, requiriendo más tokens de salida por tarea que otros modelos. Esto puede limitar su eficiencia en aplicaciones donde el costo de tokens sea un factor crítico.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Creen que el alto consumo de tokens de GLM-5.2 podría desincentivar su adopción en aplicaciones comerciales frente a modelos más eficientes, o su rendimiento superior compensará este costo?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://simonwillison.net/2026/Jun/17/glm-52/#atom-everything" target="_blank" rel="noopener">🔗 Simon Willison</a></div>
+    </article>
+    <article class="card" style="--accent: #eb459e">
+      <div class="card-head">
+        <span class="badge">Robotics</span>
+        <span class="rank">relevancia 75/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">5.</span> <a href="https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan" target="_blank" rel="noopener">Midjourney lanza un escáner corporal basado en ultrasonido</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>Midjourney ha presentado su primer producto de hardware, el Midjourney Scanner, un escáner corporal que utiliza tecnología de ultrasonido para crear imágenes detalladas del interior del cuerpo. Este dispositivo, desarrollado en colaboración con Butterfly Network, promete una calidad de imagen comparable a la de las resonancias magnéticas.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Este avance es significativo porque podría democratizar el acceso a escaneos corporales de alta calidad, permitiendo un monitoreo más frecuente de la salud sin los riesgos asociados a la radiación de los métodos tradicionales. Además, la integración de IA para el procesamiento de imágenes puede mejorar la precisión y la utilidad de los diagnósticos.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Las aplicaciones prácticas incluyen el monitoreo de cambios en la composición corporal en respuesta a dietas o programas de ejercicio, así como la creación de mapas de composición corporal que podrían ser compartidos con médicos y herramientas de salud basadas en IA. Esto podría facilitar un enfoque más proactivo en la salud personal.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>Sin embargo, el dispositivo aún enfrenta desafíos regulatorios, ya que ciertas aplicaciones médicas requerirán aprobaciones de la FDA. Además, la efectividad y precisión del escáner en comparación con tecnologías establecidas como la resonancia magnética deben ser validadas en estudios clínicos.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Qué implicaciones éticas y técnicas debería considerar la comunidad de desarrolladores al integrar inteligencia artificial en dispositivos médicos como el escáner corporal de Midjourney, especialmente en términos de privacidad de los datos y precisión diagnóstica?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://www.theverge.com/ai-artificial-intelligence/952011/midjourney-medical-ai-ultrasound-scan" target="_blank" rel="noopener">🔗 The Verge AI</a></div>
+    </article>
+    <article class="card" style="--accent: #f59e0b">
+      <div class="card-head">
+        <span class="badge">Automation</span>
+        <span class="rank">relevancia 70/100</span>
+      </div>
+      <h2 class="card-title"><span class="num">6.</span> <a href="https://arstechnica.com/ai/2026/06/pentagon-boasts-of-using-ai-to-write-reports-mandated-by-congress/" target="_blank" rel="noopener">El Pentágono utiliza IA para redactar informes a Congreso</a></h2>
+      <div class="section"><h3>🔍 Qué ha pasado</h3><p>El Departamento de Defensa de EE. UU. ha comenzado a usar herramientas de IA generativa para redactar informes requeridos por el Congreso. Este cambio se ha implementado a través de la plataforma GenAI.mil, que permite a los miembros de las fuerzas armadas acceder a estas tecnologías para agilizar la elaboración de documentos.</p></div><div class="section"><h3>💡 Por qué importa</h3><p>Este enfoque representa un avance significativo en la automatización de procesos burocráticos dentro del gobierno, lo que podría reducir el tiempo y los recursos necesarios para cumplir con los mandatos legislativos. Sin embargo, también plantea preguntas sobre la precisión y la responsabilidad de la información generada por IA en contextos críticos.</p></div><div class="section"><h3>🛠️ Cómo podríamos usarlo</h3><p>Además de su uso en informes de defensa, la IA generativa podría aplicarse en otras áreas gubernamentales para mejorar la eficiencia en la redacción de documentos, desde informes de auditoría hasta comunicaciones internas. Esto podría liberar tiempo para que los empleados se concentren en tareas más estratégicas.</p></div><div class="section"><h3>⚠️ Limitaciones o dudas</h3><p>La dependencia de la IA para la redacción de informes críticos puede llevar a errores si no se implementan procesos de revisión adecuados. La falta de supervisión humana puede comprometer la calidad y la integridad de la información, lo que es especialmente preocupante en el contexto de la rendición de cuentas gubernamental.</p></div>
+      <div class="section question">
+        <h3>💬 Pregunta para la comunidad</h3>
+        <p>¿Deberían las instituciones gubernamentales adoptar ampliamente la IA generativa para la redacción de informes críticos, considerando los riesgos potenciales de precisión y responsabilidad, o es preferible mantener un enfoque más tradicional con supervisión humana?</p>
+      </div>
+      <div class="card-foot"><a class="source" href="https://arstechnica.com/ai/2026/06/pentagon-boasts-of-using-ai-to-write-reports-mandated-by-congress/" target="_blank" rel="noopener">🔗 Ars Technica AI</a></div>
+    </article>
+    <footer>
+      <p class="org">Asociación Nacional Faro, para la Aceleración de la Inteligencia Artificial</p>
+      <p>Generado el 22/06/2026 09:30 · <a href="https://anfaia.org" target="_blank" rel="noopener">anfaia.org</a> · Anfaia Weekly AI</p>
+    </footer>
+  </div>
+</body>
+</html>
